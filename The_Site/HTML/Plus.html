@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plus - JFEJ</title>
+    <link rel="stylesheet" href="../CSS/Accueil.css">
+    <link rel="stylesheet" href="../CSS/Plus.css">
+    <link rel="stylesheet" href="../CSS/Responsive.css">
+</head>
+<body data-logout-url="../../JFEJ/HTML/profil.html" data-account-home-url="../../JFEJ/HTML/index.html">
+    <div class="JFEJ-app" id="appContainer">
+        <div class="JFEJ-bg" aria-hidden="true">
+            <div class="JFEJ-blob JFEJ-blob--violet"></div>
+            <div class="JFEJ-blob JFEJ-blob--rose"></div>
+            <div class="JFEJ-blob JFEJ-blob--bleu"></div>
+        </div>
+
+        <nav class="JFEJ-sidebar" aria-label="Navigation principale">
+            <div class="JFEJ-brand">
+                <a class="JFEJ-logo-wrapper" href="Accueil.html" aria-label="JFEJ, accueil">
+                    <span class="JFEJ-logo-icon">J</span>
+                    <span class="JFEJ-brand-title">JFEJ <span class="JFEJ-star">✦</span></span>
+                </a>
+                <button class="JFEJ-toggle-btn" id="btnToggleSidebar" type="button" title="Réduire/Étendre le menu" aria-label="Réduire le menu">◀</button>
+            </div>
+
+            <div class="JFEJ-links">
+                <a class="JFEJ-link" href="Accueil.html">
+                    <span class="JFEJ-link-icon">🏠</span>
+                    <span class="JFEJ-link-text">Accueil</span>
+                </a>
+                <a class="JFEJ-link" href="#" id="btnSearch" aria-controls="searchPanel" aria-expanded="false">
+                    <span class="JFEJ-link-icon">🔍</span>
+                    <span class="JFEJ-link-text">Rechercher</span>
+                </a>
+                <a class="JFEJ-link" href="Mur%20_du%20_lyc%C3%A9e.html">
+                    <span class="JFEJ-link-icon">▦</span>
+                    <span class="JFEJ-link-text">Mur du lycée</span>
+                    <span class="JFEJ-badge">7</span>
+                </a>
+                <a class="JFEJ-link" href="Messages.html">
+                    <span class="JFEJ-link-icon">◉</span>
+                    <span class="JFEJ-link-text">Messages</span>
+                    <span class="JFEJ-badge">3</span>
+                </a>
+
+                <div class="JFEJ-divider"></div>
+
+                <a class="JFEJ-link" href="Mon%20compte.html">
+                    <span class="JFEJ-link-icon">👤</span>
+                    <span class="JFEJ-link-text">Compte</span>
+                </a>
+                <a class="JFEJ-link is-active" href="Plus.html" aria-current="page">
+                    <span class="JFEJ-link-icon">☰</span>
+                    <span class="JFEJ-link-text">Plus</span>
+                </a>
+            </div>
+
+            <div class="JFEJ-user">
+                <div class="JFEJ-avatar" aria-hidden="true">J</div>
+                <div class="JFEJ-user-details">
+                    <div class="JFEJ-username">JFEJ</div>
+                    <div class="JFEJ-userrole">Élève</div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="JFEJ-search-panel" id="searchPanel" aria-hidden="true" inert>
+            <button class="JFEJ-search-close" type="button" aria-label="Fermer la recherche">✕</button>
+            <h2 class="JFEJ-heading">Recherche</h2>
+            <p class="JFEJ-subheading">Trouvez rapidement vos projets ou fichiers.</p>
+            <input type="search" class="JFEJ-search-input" placeholder="Tapez votre recherche..." aria-label="Rechercher">
+        </div>
+        <button class="JFEJ-search-backdrop" type="button" aria-label="Fermer la recherche"></button>
+
+        <main class="JFEJ-main">
+            <header class="JFEJ-header">
+                <h1 class="JFEJ-heading">Plus</h1>
+                <p class="JFEJ-subheading">Retrouvez ici les options et ressources complémentaires de JFEJ.</p>
+            </header>
+
+            <section class="JFEJ-plus-options" aria-label="Options et ressources">
+                <article class="JFEJ-plus-card">
+                    <div class="JFEJ-plus-card-icon" aria-hidden="true">🌙</div>
+                    <div class="JFEJ-plus-card-content">
+                        <h2>Apparence</h2>
+                        <p>Choisissez le thème clair ou sombre pour votre interface.</p>
+                    </div>
+                    <button class="JFEJ-plus-action" id="btnTheme" type="button" aria-pressed="false">
+                        <span class="JFEJ-plus-action-icon" aria-hidden="true">🌙</span>
+                        <span id="themeLabel">Passer au mode sombre</span>
+                    </button>
+                </article>
+
+                <article class="JFEJ-plus-card">
+                    <div class="JFEJ-plus-card-icon" aria-hidden="true">📚</div>
+                    <div class="JFEJ-plus-card-content">
+                        <h2>Annales et révisions</h2>
+                        <p>Accédez aux ressources pour préparer vos examens.</p>
+                    </div>
+                    <a class="JFEJ-plus-action" href="https://miabecampus.com" target="_blank" rel="noopener noreferrer">
+                        Ouvrir les ressources
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+
+            </section>
+
+            <section class="JFEJ-plus-section JFEJ-teacher-management" id="teacher-account-management" aria-labelledby="teacher-account-title" hidden>
+                <h2 class="JFEJ-plus-section-title" id="teacher-account-title">Gestion des comptes élèves</h2>
+                <p class="JFEJ-subheading">Créez un nom d’utilisateur et un mot de passe provisoire de 8 caractères à remettre à l’élève.</p>
+                <p class="JFEJ-account-storage-note">Mode prototype : les comptes et mots de passe sont stockés dans ce navigateur uniquement. N’utilisez pas de vrais identifiants avant la mise en place d’un serveur d’authentification.</p>
+                <form id="student-account-form" class="JFEJ-student-account-form">
+                    <label for="student-username">Nom d’utilisateur</label>
+                    <input id="student-username" name="username" type="text" minlength="3" maxlength="24" pattern="[\w.\-]+" autocomplete="off" required aria-describedby="student-username-help">
+                    <label for="student-class">Classe de l’élève (facultatif)</label>
+                    <select id="student-class" name="classe">
+                        <option value="">Classe non renseignée</option>
+                        <option value="Seconde">Seconde</option>
+                        <option value="1ère">1ère Générale</option>
+                        <option value="Terminale">Terminale Générale</option>
+                    </select>
+                    <button class="JFEJ-plus-action" type="submit">Créer le compte élève</button>
+                    <small id="student-username-help">3 à 24 caractères : lettres, chiffres, point, tiret ou tiret bas. L’élève sera ajouté à votre spécialité.</small>
+                </form>
+                <p class="JFEJ-student-credentials" id="student-account-credentials" role="status" aria-live="polite" hidden></p>
+                <p class="JFEJ-student-account-empty" id="student-account-empty">Aucun compte élève créé pour le moment.</p>
+                <ul class="JFEJ-student-account-list" id="student-account-list" aria-label="Comptes élèves créés par ce professeur"></ul>
+
+                <section class="JFEJ-student-enrollment" aria-labelledby="student-enrollment-title">
+                    <h3 id="student-enrollment-title">Ajouter un élève existant à ma spécialité</h3>
+                    <p class="JFEJ-subheading">Recherchez son nom d’utilisateur. Un élève peut rejoindre deux spécialités au maximum; l’autre professeur peut ensuite l’ajouter à la sienne.</p>
+                    <label class="sr-only" for="student-search">Rechercher un élève par nom ou nom d’utilisateur</label>
+                    <input id="student-search" class="JFEJ-student-search" type="search" placeholder="Nom ou nom d’utilisateur de l’élève" autocomplete="off">
+                    <p class="JFEJ-student-search-status" id="student-search-status" role="status" aria-live="polite"></p>
+                    <ul class="JFEJ-student-search-results" id="student-search-results" aria-label="Résultats de recherche des élèves"></ul>
+                </section>
+            </section>
+
+            <section class="JFEJ-plus-section JFEJ-admin-section" id="administrator-management" aria-labelledby="administrator-title" hidden>
+                <h2 class="JFEJ-plus-section-title" id="administrator-title">Administration</h2>
+                <p class="JFEJ-admin-warning">Prototype local : seuls les comptes enregistrés dans ce navigateur sont visibles. Cette interface n’est pas un contrôle d’accès sécurisé.</p>
+
+                <section class="JFEJ-admin-card" aria-labelledby="teacher-authorization-title">
+                    <h3 id="teacher-authorization-title">E-mails des professeurs autorisés</h3>
+                    <form id="teacher-allowlist-form" class="JFEJ-admin-email-form">
+                        <label class="sr-only" for="teacher-allowlist-email">Adresse e-mail du professeur</label>
+                        <input id="teacher-allowlist-email" type="email" placeholder="professeur@lycee.fr" required autocomplete="off">
+                        <button class="JFEJ-plus-action" type="submit">Autoriser l’e-mail</button>
+                    </form>
+                    <p class="JFEJ-admin-status" id="teacher-allowlist-status" role="status" aria-live="polite"></p>
+                    <ul class="JFEJ-admin-email-list" id="teacher-allowlist-list" aria-label="E-mails autorisés"></ul>
+                </section>
+
+                <section class="JFEJ-admin-card" aria-labelledby="community-report-title">
+                    <h3 id="community-report-title">Rapport de la communauté locale</h3>
+                    <p class="JFEJ-admin-warning">Les professeurs sont rattachés à une seule spécialité valable dans toutes les classes du lycée, et non à une classe.</p>
+                    <div class="JFEJ-admin-metrics" id="admin-report-metrics"></div>
+                    <div class="JFEJ-admin-report-specialties">
+                        <h4>Comptes par spécialité</h4>
+                        <ul class="JFEJ-admin-report-list" id="admin-specialty-report"></ul>
+                    </div>
+                    <div class="JFEJ-admin-community-list" id="admin-user-report" aria-live="polite"></div>
+                </section>
+            </section>
+
+            <section class="JFEJ-plus-section JFEJ-account-actions" id="plusAccountActions" aria-labelledby="plus-account-title" hidden>
+                <h2 class="JFEJ-plus-section-title" id="plus-account-title">Compte et sécurité</h2>
+                <div class="JFEJ-account-action-list">
+                    <button class="JFEJ-account-action" id="btn-quick-logout" type="button">
+                        <span class="JFEJ-account-action-icon" aria-hidden="true">↪</span>
+                        <span><strong>Déconnexion</strong><small>Quitter votre session sur cet appareil.</small></span>
+                    </button>
+                    <button class="JFEJ-account-action is-danger" id="btn-delete-account" type="button">
+                        <span class="JFEJ-account-action-icon" aria-hidden="true">⌫</span>
+                        <span><strong>Supprimer mon compte</strong><small>Supprimer votre compte et les informations enregistrées sur cet appareil.</small></span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="JFEJ-plus-section" aria-labelledby="plus-shortcuts-title">
+                <h2 class="JFEJ-plus-section-title" id="plus-shortcuts-title">Raccourcis utiles</h2>
+                <div class="JFEJ-plus-shortcuts">
+                    <a class="JFEJ-plus-shortcut" href="Mon%20compte.html">
+                        <span class="JFEJ-plus-card-icon" aria-hidden="true">👤</span>
+                        <span><strong>Mon compte</strong><small>Consulter et modifier votre profil</small></span>
+                        <span class="JFEJ-plus-shortcut-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="JFEJ-plus-shortcut" href="Mur%20_du%20_lyc%C3%A9e.html">
+                        <span class="JFEJ-plus-card-icon" aria-hidden="true">▦</span>
+                        <span><strong>Mur du lycée</strong><small>Retrouver les publications de la communauté</small></span>
+                        <span class="JFEJ-plus-shortcut-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="JFEJ-plus-section" aria-labelledby="plus-faq-title">
+                <h2 class="JFEJ-plus-section-title" id="plus-faq-title">Questions fréquentes</h2>
+                <div class="JFEJ-plus-faq">
+                    <details>
+                        <summary>Comment changer le thème de l’application ?</summary>
+                        <p>Utilisez le bouton « Apparence » en haut de cette page. Votre choix est mémorisé dans ce navigateur.</p>
+                    </details>
+                    <details>
+                        <summary>Où modifier mes informations ou mes spécialités ?</summary>
+                        <p>Ouvrez « Mon compte » depuis les raccourcis ci-dessus pour consulter ou modifier votre profil.</p>
+                    </details>
+                    <details>
+                        <summary>Je n’arrive pas à me connecter, que faire ?</summary>
+                        <p>Professeur : connectez-vous avec votre adresse e-mail. Élève : utilisez le nom d’utilisateur et le mot de passe remis par votre professeur.</p>
+                    </details>
+                    <details>
+                        <summary>Où trouver les ressources de révision ?</summary>
+                        <p>Le lien « Ouvrir les ressources » vous dirige vers le site externe d’annales et de révisions.</p>
+                    </details>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../JS/The_Site.js"></script>
+</body>
+</html>

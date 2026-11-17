@@ -1,0 +1,824 @@
+/* ==========================================================================
+   JFEJ PLUS - STYLES ET CONFIGURATION
+   ========================================================================== */
+
+/* Importation de la police Playfair Display pour le logo */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,800&display=swap');
+
+.JFEJ-plus-options {
+    display: grid;
+    gap: 16px;
+    max-width: 900px;
+}
+
+.JFEJ-plus-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+}
+
+.JFEJ-plus-card-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    background: rgba(138, 43, 226, 0.18);
+    font-size: 22px;
+}
+
+.JFEJ-plus-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.JFEJ-plus-card-content h2 {
+    margin-bottom: 5px;
+    color: var(--text-main);
+    font-size: 16px;
+}
+
+.JFEJ-plus-card-content p {
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.JFEJ-plus-action,
+.JFEJ-plus-status {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 9px 14px;
+    border: 1px solid var(--glass-border);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+button.JFEJ-plus-action {
+    cursor: pointer;
+}
+
+.JFEJ-plus-action:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.JFEJ-plus-action:focus-visible {
+    outline: 2px solid #ff007f;
+    outline-offset: 3px;
+}
+
+.JFEJ-plus-section {
+    max-width: 900px;
+    margin-top: 30px;
+}
+
+.JFEJ-plus-section-title {
+    margin-bottom: 14px;
+    color: var(--text-main);
+    font-size: 18px;
+}
+
+.JFEJ-admin-section[hidden] {
+    display: none;
+}
+
+.JFEJ-admin-warning,
+.JFEJ-admin-status {
+    margin-bottom: 14px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.JFEJ-admin-card {
+    margin-top: 14px;
+    padding: 18px;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: var(--glass-bg);
+}
+
+.JFEJ-admin-card h3 {
+    margin-bottom: 14px;
+    color: var(--text-main);
+    font-size: 15px;
+}
+
+.JFEJ-admin-card h4 {
+    margin-bottom: 8px;
+    color: var(--text-main);
+    font-size: 13px;
+}
+
+.JFEJ-admin-email-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.JFEJ-admin-email-form input {
+    min-width: 0;
+    min-height: 40px;
+    flex: 1 1 230px;
+    padding: 9px 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+    font: inherit;
+}
+
+.JFEJ-admin-email-form button {
+    cursor: pointer;
+}
+
+.JFEJ-admin-email-list,
+.JFEJ-admin-report-list {
+    display: grid;
+    gap: 8px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.JFEJ-admin-email-list li,
+.JFEJ-admin-report-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: 9px;
+    color: var(--text-main);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-admin-email-list .JFEJ-plus-action {
+    min-height: 34px;
+    flex: 0 0 auto;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.JFEJ-admin-report-list strong {
+    flex: 0 0 auto;
+}
+
+.JFEJ-admin-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.JFEJ-admin-metric {
+    display: grid;
+    gap: 6px;
+    padding: 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+}
+
+.JFEJ-admin-metric span {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.JFEJ-admin-metric strong {
+    color: var(--text-main);
+    font-size: 20px;
+}
+
+.JFEJ-admin-report-specialties {
+    margin-top: 20px;
+}
+
+.JFEJ-admin-community-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.JFEJ-admin-teacher-card {
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.JFEJ-admin-teacher-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.JFEJ-admin-teacher-avatar {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    place-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8a2be2, #e91e8c);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.JFEJ-admin-teacher-identity {
+    min-width: 0;
+}
+
+.JFEJ-admin-teacher-identity h5,
+.JFEJ-admin-teacher-card > h5 {
+    color: var(--text-main);
+    font-size: 14px;
+}
+
+.JFEJ-admin-teacher-identity p,
+.JFEJ-admin-teacher-card > p {
+    margin-top: 3px;
+    color: var(--text-muted);
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-admin-teacher-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.JFEJ-admin-specialty-badge,
+.JFEJ-admin-student-count {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 5px 9px;
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    color: var(--text-main);
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-admin-specialty-badge {
+    background: rgba(138, 43, 226, 0.14);
+}
+
+.JFEJ-admin-student-count {
+    color: var(--text-muted);
+}
+
+.JFEJ-admin-students-heading {
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.JFEJ-admin-student-list {
+    display: grid;
+    gap: 7px;
+    margin: 8px 0 0;
+    padding: 0 0 0 14px;
+    border-left: 2px solid rgba(138, 43, 226, 0.35);
+    list-style: none;
+}
+
+.JFEJ-admin-student-list li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px 12px;
+    min-width: 0;
+    padding: 9px 10px;
+    border: 1px solid var(--glass-border);
+    border-radius: 9px;
+    background: var(--glass-bg);
+}
+
+.JFEJ-admin-student-name {
+    min-width: 0;
+    color: var(--text-main);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-admin-student-username,
+.JFEJ-admin-student-class {
+    min-width: 0;
+    color: var(--text-muted);
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-admin-student-class {
+    text-align: right;
+}
+
+.JFEJ-admin-student-empty,
+.JFEJ-admin-empty {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.JFEJ-account-actions[hidden] {
+    display: none;
+}
+
+.JFEJ-teacher-management .JFEJ-subheading {
+    margin-bottom: 16px;
+}
+
+.JFEJ-account-storage-note {
+    max-width: 700px;
+    margin-bottom: 14px;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.JFEJ-student-account-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 10px 14px;
+    max-width: 700px;
+    padding: 18px;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: var(--glass-bg);
+}
+
+.JFEJ-student-account-form label,
+.JFEJ-student-account-form small {
+    grid-column: 1 / -1;
+}
+
+.JFEJ-student-account-form label {
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.JFEJ-student-account-form input,
+.JFEJ-student-account-form select {
+    min-width: 0;
+    min-height: 40px;
+    padding: 9px 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+    font: inherit;
+}
+
+.JFEJ-student-account-form input:focus-visible {
+    outline: 2px solid #ff007f;
+    outline-offset: 2px;
+}
+
+.JFEJ-student-account-form small {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.JFEJ-student-account-form .JFEJ-plus-action {
+    cursor: pointer;
+}
+
+.JFEJ-student-credentials {
+    max-width: 700px;
+    margin-top: 12px;
+    padding: 14px 16px;
+    border: 1px solid rgba(67, 181, 129, 0.45);
+    border-radius: 12px;
+    background: rgba(67, 181, 129, 0.12);
+    color: var(--text-main);
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-student-account-empty {
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.JFEJ-student-account-list {
+    display: grid;
+    gap: 8px;
+    max-width: 700px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.JFEJ-student-account-list li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    background: var(--glass-bg);
+    color: var(--text-main);
+    font-size: 13px;
+}
+
+.JFEJ-student-account-username {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-student-account-password {
+    color: var(--text-muted);
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-student-account-list button {
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 77, 77, 0.36);
+    border-radius: 8px;
+    background: rgba(160, 24, 35, 0.12);
+    color: var(--text-main);
+    font: inherit;
+    cursor: pointer;
+}
+
+.JFEJ-student-account-list button:focus-visible {
+    outline: 2px solid #ff007f;
+    outline-offset: 2px;
+}
+
+.JFEJ-student-enrollment {
+    max-width: 700px;
+    margin-top: 24px;
+    padding: 18px;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: var(--glass-bg);
+}
+
+.JFEJ-student-enrollment h3 {
+    margin-bottom: 6px;
+    color: var(--text-main);
+    font-size: 15px;
+}
+
+.JFEJ-student-enrollment .JFEJ-subheading {
+    margin-bottom: 14px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.JFEJ-student-search {
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+    font: inherit;
+}
+
+.JFEJ-student-search:focus-visible {
+    outline: 2px solid #ff007f;
+    outline-offset: 2px;
+}
+
+.JFEJ-student-search-status {
+    min-height: 18px;
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.JFEJ-student-search-results {
+    display: grid;
+    gap: 8px;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.JFEJ-student-search-results li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    background: var(--glass-bg);
+}
+
+.JFEJ-student-search-identity {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+}
+
+.JFEJ-student-search-identity strong {
+    color: var(--text-main);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-student-search-identity span {
+    color: var(--text-muted);
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.JFEJ-student-search-results .JFEJ-plus-action {
+    min-height: 36px;
+    flex: 0 0 auto;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.JFEJ-student-search-results .JFEJ-plus-action:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.JFEJ-account-action-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 12px;
+}
+
+.JFEJ-account-action {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: var(--glass-bg);
+    color: var(--text-main);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.JFEJ-account-action[hidden] {
+    display: none;
+}
+
+.JFEJ-account-action:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.JFEJ-account-action:focus-visible {
+    outline: 2px solid #ff007f;
+    outline-offset: 3px;
+}
+
+.JFEJ-account-action-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 20px;
+}
+
+.JFEJ-account-action > span:last-child {
+    display: grid;
+    gap: 4px;
+}
+
+.JFEJ-account-action strong {
+    font-size: 13px;
+}
+
+.JFEJ-account-action small {
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.JFEJ-account-action.is-danger {
+    border-color: rgba(255, 77, 77, 0.32);
+    background: rgba(160, 24, 35, 0.12);
+}
+
+.JFEJ-account-action.is-danger .JFEJ-account-action-icon {
+    border-color: rgba(255, 77, 77, 0.36);
+    background: rgba(160, 24, 35, 0.2);
+    color: #ff9696;
+}
+
+.JFEJ-account-action.is-danger:hover {
+    border-color: rgba(255, 77, 77, 0.55);
+    background: rgba(190, 30, 45, 0.2);
+}
+
+.JFEJ-plus-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+}
+
+.JFEJ-plus-shortcut {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: var(--glass-bg);
+    color: var(--text-main);
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.JFEJ-plus-shortcut:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.JFEJ-plus-shortcut > span:nth-child(2) {
+    display: grid;
+    flex: 1;
+    gap: 4px;
+}
+
+.JFEJ-plus-shortcut strong {
+    font-size: 13px;
+}
+
+.JFEJ-plus-shortcut small {
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.JFEJ-plus-shortcut-arrow {
+    color: var(--text-muted);
+    font-size: 20px;
+}
+
+.JFEJ-plus-faq {
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: var(--glass-bg);
+}
+
+.JFEJ-plus-faq details + details {
+    border-top: 1px solid var(--glass-border);
+}
+
+.JFEJ-plus-faq summary {
+    padding: 16px 18px;
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.JFEJ-plus-faq summary::marker {
+    color: #ff007f;
+}
+
+.JFEJ-plus-faq p {
+    padding: 0 18px 16px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.JFEJ-plus-shortcut:focus-visible,
+.JFEJ-plus-faq summary:focus-visible {
+    outline: 2px solid #ff007f;
+    outline-offset: 3px;
+}
+
+body.light-mode .JFEJ-plus-action {
+    background: rgba(34, 16, 44, 0.06);
+}
+
+body.light-mode .JFEJ-plus-action:hover:not(:disabled) {
+    background: rgba(34, 16, 44, 0.12);
+}
+
+@media (max-width: 650px) {
+    .JFEJ-admin-card {
+        padding: 14px;
+    }
+
+    .JFEJ-student-enrollment {
+        padding: 14px;
+    }
+
+    .JFEJ-student-search-results li {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .JFEJ-student-search-results .JFEJ-plus-action {
+        width: 100%;
+        white-space: normal;
+    }
+
+    .JFEJ-admin-teacher-card {
+        padding: 12px;
+    }
+
+    .JFEJ-admin-student-list li {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .JFEJ-admin-student-name {
+        grid-column: 1 / -1;
+    }
+
+    .JFEJ-admin-student-class {
+        text-align: right;
+    }
+
+    .JFEJ-plus-card {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .JFEJ-plus-card-content {
+        flex-basis: calc(100% - 66px);
+    }
+
+    .JFEJ-plus-action {
+        margin-left: 66px;
+    }
+
+    .JFEJ-student-account-form {
+        grid-template-columns: 1fr;
+    }
+
+    .JFEJ-student-account-form .JFEJ-plus-action {
+        margin-left: 0;
+    }
+
+    .JFEJ-student-account-list li {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .JFEJ-student-account-password {
+        grid-column: 1;
+    }
+
+    .JFEJ-student-account-list button {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+}

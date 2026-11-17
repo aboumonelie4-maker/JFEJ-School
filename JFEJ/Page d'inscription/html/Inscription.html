@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JFEJ School — Compte professeur</title>
+  <meta name="description" content="Créez un compte professeur sur JFEJ School pour gérer les comptes de vos élèves." />
+  
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="../../CSS/common.css" />
+  <link rel="stylesheet" href="../CSS/Page d'inscription.css" />
+</head>
+<body>
+  <input type="checkbox" id="dark-mode-toggle" />
+
+  <!-- HEADER TOPBAR -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="../../HTML/index.html" class="brand" aria-label="JFEJ School">
+        <div class="brand-mark">
+          <span class="letter-j">J</span>
+        </div>
+        <div class="brand-text">
+          <strong>JFEJ School</strong>
+          <span>Mini réseau social scolaire</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="../../HTML/index.html">Accueil</a></li>
+          <li><a href="../../HTML/description.html">Description</a></li>
+          <li><a href="../../HTML/vie-scolaire.html">Vie scolaire</a></li>
+          <li><a href="../../HTML/profil.html">Mon Profil</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <label class="toggle-dark-mode" for="dark-mode-toggle" aria-label="Basculer le mode sombre">
+          <div class="toggle-track">
+            <div class="toggle-knob">
+              <span class="toggle-icon toggle-icon--sun">☀</span>
+              <span class="toggle-icon toggle-icon--moon">☽</span>
+            </div>
+          </div>
+        </label>
+        <a href="../../Page de Connexion/HTML/Page de connexion.html" class="btn-cta">Connexion</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL : FORMULAIRE D'INSCRIPTION -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Créer un compte professeur</h1>
+        <p>Utilisez votre adresse e-mail et votre mot de passe pour gérer les comptes élèves.</p>
+        <p class="form-help">Votre adresse e-mail doit d’abord être autorisée par l’administrateur.</p>
+        <p class="form-help">Prototype local : les comptes et mots de passe restent dans ce navigateur et ne conviennent pas à de vrais identifiants.</p>
+      </div>
+
+      <!-- Zone de message d'alerte JS -->
+      <div id="auth-alert" class="auth-alert" role="alert"></div>
+
+      <form id="register-form" class="auth-form" action="#" method="POST" novalidate>
+        <!-- Ligne : Prénom et Nom -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input 
+              type="text" 
+              id="prenom" 
+              name="prenom" 
+              class="form-input" 
+              placeholder="ex: Thomas" 
+              required 
+              autocomplete="given-name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input 
+              type="text" 
+              id="nom" 
+              name="nom" 
+              class="form-input" 
+              placeholder="ex: Dupont" 
+              required 
+              autocomplete="family-name"
+            />
+          </div>
+        </div>
+
+        <!-- Informations réservées aux comptes élèves -->
+        <div class="form-row" id="registration-student-details" hidden>
+          <div class="form-group">
+            <label for="classe">Classe</label>
+            <select id="classe" name="classe" class="form-select" required>
+              <option value="" disabled selected>Sélectionnez...</option>
+              <option value="Seconde">Seconde</option>
+              <option value="1ère">1ère Générale</option>
+              <option value="Terminale">Terminale Générale</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <span class="form-label">Spécialités</span>
+            <div id="registration-specialty-fields" class="registration-specialty-fields" aria-describedby="specialite-help">
+              <div class="registration-specialty-field">
+                <label for="specialite-1">Spécialité 1</label>
+                <select id="specialite-1" name="specialite-1" class="form-select">
+                  <option value="">Choisir...</option>
+                  <option value="Numérique et Sciences Informatiques (NSI)">NSI</option>
+                  <option value="Mathématique">Mathématiques</option>
+                  <option value="Physique-Chimie">Physique-Chimie</option>
+                  <option value="Science de la Vie et de la Terre">SVT</option>
+                  <option value="Sciences Économiques et Sociales (SES)">SES</option>
+                  <option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option>
+                  <option value="Humanités, Littérature et Philosophie (HLP)">HLP</option>
+                  <option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option>
+                </select>
+              </div>
+              <div class="registration-specialty-field">
+                <label for="specialite-2">Spécialité 2</label>
+                <select id="specialite-2" name="specialite-2" class="form-select">
+                  <option value="">Choisir...</option>
+                  <option value="Numérique et Sciences Informatiques (NSI)">NSI</option>
+                  <option value="Mathématique">Mathématiques</option>
+                  <option value="Physique-Chimie">Physique-Chimie</option>
+                  <option value="Science de la Vie et de la Terre">SVT</option>
+                  <option value="Sciences Économiques et Sociales (SES)">SES</option>
+                  <option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option>
+                  <option value="Humanités, Littérature et Philosophie (HLP)">HLP</option>
+                  <option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option>
+                </select>
+              </div>
+              <div class="registration-specialty-field">
+                <label for="specialite-3">Spécialité 3</label>
+                <select id="specialite-3" name="specialite-3" class="form-select">
+                  <option value="">Choisir...</option>
+                  <option value="Numérique et Sciences Informatiques (NSI)">NSI</option>
+                  <option value="Mathématique">Mathématiques</option>
+                  <option value="Physique-Chimie">Physique-Chimie</option>
+                  <option value="Science de la Vie et de la Terre">SVT</option>
+                  <option value="Sciences Économiques et Sociales (SES)">SES</option>
+                  <option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option>
+                  <option value="Humanités, Littérature et Philosophie (HLP)">HLP</option>
+                  <option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option>
+                </select>
+              </div>
+            </div>
+            <small id="specialite-help" class="form-help">Choisissez votre classe pour connaître le nombre de spécialités à sélectionner.</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="teacher-specialty">Spécialité enseignée (une seule)</label>
+          <select id="teacher-specialty" name="teacher-specialty" class="form-select" required>
+            <option value="">Choisir une spécialité...</option>
+            <option value="Numérique et Sciences Informatiques (NSI)">NSI</option>
+            <option value="Mathématique">Mathématiques</option>
+            <option value="Physique-Chimie">Physique-Chimie</option>
+            <option value="Science de la Vie et de la Terre">SVT</option>
+            <option value="Sciences Économiques et Sociales (SES)">SES</option>
+            <option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option>
+            <option value="Humanités, Littérature et Philosophie (HLP)">HLP</option>
+            <option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option>
+            <option value="Admin">Admin — connexion à un compte administrateur existant</option>
+          </select>
+          <small class="form-help">Un professeur ne peut associer qu’une seule spécialité à son compte, quelle que soit la classe enseignée. « Admin » sert uniquement à se connecter avec les identifiants d’un compte administrateur déjà créé; cette option ne crée pas de droits administrateur.</small>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Adresse e-mail</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="form-input" 
+            placeholder="ex: thomas.dupont@lycee.fr" 
+            required 
+            autocomplete="email"
+          />
+        </div>
+
+        <!-- Mot de passe -->
+        <div class="form-group">
+          <label for="password">Mot de passe (8 caractères minimum)</label>
+          <div class="input-container">
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              class="form-input" 
+              placeholder="••••••••" 
+              minlength="8"
+              required 
+              autocomplete="new-password"
+            />
+            <button 
+              type="button" 
+              class="toggle-pwd-btn" 
+              data-target="password" 
+              aria-label="Afficher le mot de passe"
+            >👁️</button>
+          </div>
+        </div>
+
+        <!-- Confirmer le mot de passe -->
+        <div class="form-group">
+          <label for="confirm-password">Confirmer le mot de passe</label>
+          <div class="input-container">
+            <input 
+              type="password" 
+              id="confirm-password" 
+              name="confirm-password" 
+              class="form-input" 
+              placeholder="••••••••" 
+              required 
+              autocomplete="new-password"
+            />
+            <button 
+              type="button" 
+              class="toggle-pwd-btn" 
+              data-target="confirm-password" 
+              aria-label="Afficher le mot de passe"
+            >👁️</button>
+          </div>
+        </div>
+
+        <!-- Charte d'utilisation -->
+        <label class="terms-group">
+          <input type="checkbox" id="terms" name="terms" required />
+          <span>J'accepte la charte d'utilisation et le règlement intérieur de JFEJ School.</span>
+        </label>
+
+        <!-- Bouton Soumettre -->
+        <button type="submit" class="btn-submit">Créer mon compte professeur</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Vous avez déjà un compte ? 
+          <a href="../../Page de Connexion/HTML/Page de connexion.html">Se connecter ici</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="../../JS/navigation.js"></script>
+  <script src="../../JS/auth.js"></script>
+</body>
+</html>
